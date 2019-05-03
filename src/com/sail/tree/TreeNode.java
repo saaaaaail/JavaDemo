@@ -1,4 +1,4 @@
-package com.sail.leaks;
+package com.sail.tree;
 
 public class TreeNode implements Comparable<TreeNode>{
     private int val;

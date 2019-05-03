@@ -1,19 +1,20 @@
-package com.sail.leaks;
+package com.sail.tree;
 
 import java.util.ArrayDeque;
 
-public class LDR {
-    public static void ldr(TreeNode root){
+public class DLR {
+    public static void dlr(TreeNode root){
         TreeNode tmpNode = root;
         ArrayDeque<TreeNode> stack = new ArrayDeque<>();
+        //System.out.println(tmpNode.getVal());
         while(!stack.isEmpty()||tmpNode!=null){
             while (tmpNode!=null){
+                System.out.println(tmpNode.getVal());
                 stack.push(tmpNode);
                 tmpNode=tmpNode.getLchild();
             }
             tmpNode = stack.pop();
-            System.out.println(tmpNode.getVal());
-            tmpNode = tmpNode.getRchild();
+            tmpNode=tmpNode.getRchild();
         }
     }
 }
