@@ -8,10 +8,10 @@ public class Tree {
     }
 //5,3,6,2,4,null,null,1
     public TreeNode createTree(){
-        insertNode(5);
-        insertNode(3);
-        insertNode(6);
-        insertNode(2);
+        insertNode(5);  //5
+        insertNode(3);  //3  6
+        insertNode(6);  //2 4
+        insertNode(2);  //1
         insertNode(4);
         insertNode(1);
         return root;
@@ -65,5 +65,8 @@ public class Tree {
         System.out.println(" ");
         ReverseTree.reverseTree(treeNode.getLchild());
         LDR.ldr(treeNode.getLchild());
+        //层次遍历
+        System.out.println(" ");
+        LevelTree.levelTree(treeNode.getLchild());
     }
 }
