@@ -1,9 +1,5 @@
-package com.sail.demo;
+package com.sail.leetcode;
 
-import com.sun.activation.registries.MailcapParseException;
-
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Scanner;
 
 /**

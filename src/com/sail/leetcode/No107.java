@@ -1,6 +1,5 @@
-package com.sail.demo;
+package com.sail.leetcode;
 
-import com.sail.tree.Tree;
 import com.sail.tree.TreeNode;
 
 import java.util.ArrayList;

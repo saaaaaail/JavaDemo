@@ -1,7 +1,4 @@
-package com.sail.demo;
-
-import java.util.LinkedList;
-import java.util.List;
+package com.sail.leetcode;
 
 /**
  * @program: No312

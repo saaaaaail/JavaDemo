@@ -1,4 +1,4 @@
-package com.sail.demo;
+package com.sail.leetcode;
 
 import java.util.HashMap;
 import java.util.Iterator;
