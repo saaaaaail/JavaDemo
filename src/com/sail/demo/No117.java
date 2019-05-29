@@ -29,24 +29,25 @@ import java.util.LinkedList;
  * @author: sail
  * @create: 2019/05/07 20:32
  */
-// Definition for a Node.
-class Node {
-    public int val;
-    public Node left;
-    public Node right;
-    public Node next;
 
-    public Node() {}
-
-    public Node(int _val,Node _left,Node _right,Node _next) {
-        val = _val;
-        left = _left;
-        right = _right;
-        next = _next;
-    }
-}
 
 public class No117 {
+    // Definition for a Node.
+    class Node {
+        public int val;
+        public Node left;
+        public Node right;
+        public Node next;
+
+        public Node() {}
+
+        public Node(int _val,Node _left,Node _right,Node _next) {
+            val = _val;
+            left = _left;
+            right = _right;
+            next = _next;
+        }
+    }
     static LinkedList<Node> queue;
     static LinkedList<Integer> qindex;
     static int[] floor;
