@@ -6,6 +6,14 @@ import javax.xml.soap.Node;
 import java.io.*;
 import java.util.*;
 
+//class模版在此
+/**
+ *@program: ${PROJECT_NAME}
+ *@description: ${description}
+ *@author: sail
+ *@create: ${YEAR}/${MONTH}/${DAY} ${HOUR}:${MINUTE}
+ */
+
 public class Main {
 
     public static void main(String[] args) {
