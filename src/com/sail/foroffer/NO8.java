@@ -37,13 +37,26 @@ public class NO8 {
         TreeNode right = node.getRchild();
         TreeNode parent = node.getParent();
         if (right!=null){
+            /**
+             * 当前节点的右孩子不为空就找右孩子的最左节点
+             * 下一个节点为这个最左节点
+             */
             while (right.getRchild()!=null){
                 right=right.getRchild();
             }
             return right;
         }else if (parent!=null&&parent.getLchild()==node){
+            /**
+             * 右孩子为空，当前节点的父节点不为空，且父节点的左孩子为当前节点
+             * 下一个节点为父节点
+             */
             return parent;
         }else if (parent!=null&&parent.getRchild()==node){
+            /**
+             * 父节点不为空，并且父节点的右孩子为当前节点，就循环找父节点
+             * 直到找到一个父节点其父父节点左孩子为父节点
+             * 下一个节点为这个父父节点
+             */
             TreeNode parpar = parent.getParent();
             while (parpar!=null&&parpar.getLchild()!=parent){
                 parent=parpar;
