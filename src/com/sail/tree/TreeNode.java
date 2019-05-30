@@ -4,6 +4,7 @@ public class TreeNode implements Comparable<TreeNode>{
     private int val;
     private TreeNode rchild;
     private TreeNode lchild;
+    private TreeNode parent;
     public TreeNode(){}
     public TreeNode(int val){
         this.val = val;
@@ -31,6 +32,14 @@ public class TreeNode implements Comparable<TreeNode>{
 
     public void setLchild(TreeNode lchild) {
         this.lchild = lchild;
+    }
+
+    public TreeNode getParent() {
+        return parent;
+    }
+
+    public void setParent(TreeNode parent) {
+        this.parent = parent;
     }
 
     @Override
