@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class NO3_2 {
     /**
      * 数字在1~n范围中，可以使用快慢指针
-     * 必存在至少一个重复元素
+     * 必存在至少一个重复元素,因此最后一定能找到
      * @param args
      */
     public static void main(String[] args) {
@@ -25,19 +25,32 @@ public class NO3_2 {
         for (int i=0;i<strs.length;i++){
             nums[i]=Integer.parseInt(strs[i]);
         }
-        System.out.println();
+        System.out.println(duplicate(nums));
     }
 
-    public static void duplicate(int[] nums){
+    /**
+     * 环形链式结构求环入口点
+     *
+     * @param nums
+     * @return
+     */
+    public static int duplicate(int[] nums){
         int fast = 0;
         int slow = 0;
 
         while (true){
             fast = nums[nums[fast]];
             slow = nums[slow];
-
-
+            if(fast==slow){
+                fast=0;
+                while (fast!=slow){
+                    fast=nums[fast];
+                    slow=nums[slow];
+                }
+                break;
+            }
         }
+        return slow;
 
     }
 }

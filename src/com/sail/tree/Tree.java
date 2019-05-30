@@ -1,13 +1,18 @@
 package com.sail.tree;
 
 public class Tree {
-    private TreeNode root;
+    private static TreeNode root;
     public Tree(){
         root = new TreeNode();
-
     }
 //5,3,6,2,4,null,null,1
-    public TreeNode createTree(){
+
+    public static TreeNode getInstance(){
+        root = new TreeNode();
+        return createTree();
+    }
+
+    public static TreeNode createTree(){
         insertNode(5);  //5
         insertNode(3);  //3  6
         insertNode(6);  //2 4
@@ -17,7 +22,7 @@ public class Tree {
         return root;
     }
 
-    public boolean insertNode(int val){
+    public static boolean insertNode(int val){
         TreeNode tmpNode = root.getLchild();
 
         if(tmpNode==null){
