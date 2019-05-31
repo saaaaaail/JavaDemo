@@ -7,11 +7,9 @@ public class ReverseTree {
         TreeNode leftNode = rootNode.getLchild();
         TreeNode rightNode = rootNode.getRchild();
 
-        TreeNode tmp = leftNode;
-        leftNode=rightNode;
-        rightNode=tmp;
-        rootNode.setRchild(rightNode);
-        rootNode.setLchild(leftNode);
+        rootNode.setRchild(leftNode);
+        rootNode.setLchild(rightNode);
+
         reverseTree(leftNode);
 
 

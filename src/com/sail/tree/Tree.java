@@ -67,9 +67,12 @@ public class Tree {
         DLR.dlr(treeNode.getLchild());
         System.out.println(" ");
         LRD.lrd(treeNode.getLchild());
+        //层次遍历
+        System.out.println(" ");
+        LevelTree.levelTree(treeNode.getLchild());
         System.out.println(" ");
         ReverseTree.reverseTree(treeNode.getLchild());
-        LDR.ldr(treeNode.getLchild());
+
         //层次遍历
         System.out.println(" ");
         LevelTree.levelTree(treeNode.getLchild());
